@@ -1,0 +1,16 @@
+<template name="questans">
+  <div>
+    {{#with actual }}
+      <h3 class="text-center">{{statement}}</h3>
+      <div>
+        {{#if answers }}
+          {{#each answers }}
+          <button type="button" class="btn-lg btn-primary btn-block answer" value="{{next}}">{{text}}</button>
+          {{/each }}
+        {{else }}
+          <button type="button" class="btn-lg btn-primary btn-block answer" value="{{next}}">Ok</button>
+        {{/if }}
+      </div>
+    {{/with }}
+  </div>
+</template>
